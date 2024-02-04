@@ -4,6 +4,7 @@
 #include "pch.h"
 #include "hamhanded.h"
 #include <cctype>
+#include <cstdint>
 
 // TODO: This is an example of a library function
 int hhAdd(int a, int b)
@@ -11,8 +12,43 @@ int hhAdd(int a, int b)
 	return a + b;
 }
 
+enum class MathOperations: uint8_t
+{
+	None =0,
+	Add,
+	Sub,
+	Mul,
+	Div,
+	Sin,
+	AddFunction,
+
+};
+
+long double hhCalcAddFloat(const char* str)
+{
+	long double nubmers[128];
+	MathOperations operations[128];
+	bool signs[128];
+	int idx = 0;
+}
+
+long double hhCalcFloat(const char* str)
+{
+	long double nubmersCell[128] = {0};
+	long double nubmersAfter[128] = { 0 };
+	MathOperations operations[128] = { MathOperations::None };
+	bool signs[128] = { false };
+	int idx = 0;
+
+}
+
 int hhCalc(const char* str)
 {
+	int nubmers[128];
+	MathOperations operations[128];
+	bool signs[128];
+	int idx = 0;
+
 	char c;
 	int a = 0;
 	int b = 0;
@@ -20,7 +56,7 @@ int hhCalc(const char* str)
 	bool isSign = false;
 	while (0 != (c = *str++))
 	{
-		if (isSign == true)
+		if (signs[idx] == true)
 		{
 			isSign == false;
 

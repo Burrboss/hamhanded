@@ -4,3 +4,5 @@
 
 extern int hhAdd(int a, int b);
 extern int hhCalc(const char* str);
+extern long double hhCalcAddFloat(const char* str);
+extern long double hhCalcFloat(const char* str);
