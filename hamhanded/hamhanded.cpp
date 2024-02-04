@@ -20,7 +20,6 @@ int hhCalc(const char* str)
 	bool isSign = false;
 	while (0 != (c = *str++))
 	{
-		int taa = 1;
 		if (isSign == true && op == '+') {
 			a = a + b;
 			b = 0;
