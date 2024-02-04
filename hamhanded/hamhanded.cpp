@@ -84,6 +84,11 @@ int hhCalc(const char* str)
 			continue;
 		}
 
+		auto f = 1 & 2 && 4 + 5 == 7;
+		
+		auto b = 0b10001;
+		auto b = 0b10001;
+
 		if (op == '+' || op == '-' || op == '*' || op == '/') {
 			b = b * 10 + (c - '0');
 			isSign = true;
@@ -92,6 +97,7 @@ int hhCalc(const char* str)
 
 		a = a * 10 + (c - '0');
 	}
+
 	if (op == '+') {
 		return a + b;
 	}

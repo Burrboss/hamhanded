@@ -19,6 +19,11 @@ TEST(HhCalc, MultiPriority) {
 	EXPECT_TRUE(true);
 }
 
+TEST(HhCalc, MultiPriority) {
+	EXPECT_EQ(hhCalc("0b101+0x2Ab0F*02/10-2+2"), 40);
+	EXPECT_TRUE(true);
+}
+
 TEST(HhCalc, MultiPriorityFloat) {
 	EXPECT_EQ(hhCalcFloat("22.0+20.012*2.34/10.34-2.12+2.33"), 40);
 	EXPECT_TRUE(true);
