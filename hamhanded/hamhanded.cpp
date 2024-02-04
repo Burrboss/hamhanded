@@ -20,27 +20,25 @@ int hhCalc(const char* str)
 	bool isSign = false;
 	while (0 != (c = *str++))
 	{
-		if (isSign == true && op == '+') {
-			a = a + b;
-			b = 0;
+		if (isSign == true)
+		{
 			isSign == false;
-		}
-		if (isSign == true && op == '-') {
-			a = a - b;
-			b = 0;
-			isSign == false;
-		}
-		if (isSign == true && op == '*') {
-			a = a * b;
-			b = 0;
-			isSign == false;
-		}
-		if (isSign == true && op == '/') {
-			a = a / b;
-			b = 0;
-			isSign == false;
-		}
 
+			if (op == '+') {
+				a = a + b;
+				b = 0;
+				isSign == false;
+			}else if (op == '-') {
+				a = a - b;
+				b = 0;
+			} else if (isSign == true && op == '*') {
+				a = a * b;
+				b = 0;
+			} else if (isSign == true && op == '/') {
+				a = a / b;
+				b = 0;
+			}
+		}
 		if (c == '+' || c == '-' || c == '*' || c == '/') {
 			op = c;
 			continue;
